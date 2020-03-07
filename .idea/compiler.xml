@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ajaxservlet2" />
-        <module name="jsindex" />
         <module name="job4j_ciname" />
-        <module name="cinemaservice" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ajaxservlet2" target="8" />
+      <module name="cinemaservice" target="8" />
+      <module name="jsindex" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
