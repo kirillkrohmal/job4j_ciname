@@ -28,7 +28,7 @@ public class JdbcStore {
         try(Connection connection = init()) {
             PreparedStatement statement = connection.prepareStatement(s1);
             statement.setString(1, halls.getRows());
-            statement.setString(2, halls.getPlace());
+            statement.setString(2, halls.getColumns());
 
             statement.executeUpdate();
         } catch (SQLException e) {
@@ -43,8 +43,7 @@ public class JdbcStore {
 
         try(Connection connection = init()) {
             PreparedStatement statement = connection.prepareStatement(s1);
-            statement.setString(1, accounts.getUsername());
-            statement.setString(2, accounts.getPhone());
+            statement.setString(1, accounts.getValue());
 
             statement.executeUpdate();
         } catch (SQLException e) {

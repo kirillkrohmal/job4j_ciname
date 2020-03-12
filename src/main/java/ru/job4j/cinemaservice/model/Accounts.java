@@ -4,16 +4,15 @@ import java.util.Objects;
 
 public class Accounts {
     private int id;
-    private String username;
-    private String phone;
+    private String value;
+
 
     public Accounts() {
     }
 
-    public Accounts(int id, String username, String phone) {
+    public Accounts(int id, String value) {
         this.id = id;
-        this.username = username;
-        this.phone = phone;
+        this.value = value;
     }
 
     public int getId() {
@@ -24,20 +23,12 @@ public class Accounts {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getValue() {
+        return value;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setValue(String value) {
+        this.value = value;
     }
 
     @Override
@@ -46,22 +37,12 @@ public class Accounts {
         if (o == null || getClass() != o.getClass()) return false;
         Accounts accounts = (Accounts) o;
         return id == accounts.id &&
-                Objects.equals(username, accounts.username) &&
-                Objects.equals(phone, accounts.phone);
+                Objects.equals(value, accounts.value);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, username, phone);
-    }
-
-    @Override
-    public String toString() {
-        return "Accounts{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", phone='" + phone + '\'' +
-                '}';
+        return Objects.hash(id, value);
     }
 }
 

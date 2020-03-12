@@ -28,7 +28,7 @@ public class HallServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
 
-        logic.addHalls(req.getParameter("rows"), req.getParameter("place"));
+        logic.addHalls(req.getParameter("rows"), req.getParameter("columns"));
         resp.sendRedirect(String.format("%s%s", req.getContextPath(), "/payment"));
     }
 }

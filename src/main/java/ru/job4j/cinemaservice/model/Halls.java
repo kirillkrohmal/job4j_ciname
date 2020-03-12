@@ -5,22 +5,24 @@ import java.util.Objects;
 public class Halls {
     private int id;
     private String rows;
-    private String place;
+    private String columns;
+    private String account_id;
+
 
     public Halls() {
     }
 
-    public Halls(int id, String rows, String place) {
+    public Halls(int id, String rows, String columns, String account_id) {
         this.id = id;
         this.rows = rows;
-        this.place = place;
+        this.columns = columns;
+        this.account_id = account_id;
     }
 
-    public Halls(String rows, String place) {
+    public Halls(String rows, String columns) {
         this.rows = rows;
-        this.place = place;
+        this.columns = columns;
     }
-
 
     public int getId() {
         return id;
@@ -38,36 +40,28 @@ public class Halls {
         this.rows = rows;
     }
 
-    public String getPlace() {
-        return place;
+
+    public String getColumns() {
+        return columns;
     }
 
-    public void setPlace(String place) {
-        this.place = place;
+    public void setColumns(String columns) {
+        this.columns = columns;
     }
-
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Halls halls = (Halls) o;
-        return Objects.equals(id, halls.id) &&
+        return id == halls.id &&
                 Objects.equals(rows, halls.rows) &&
-                Objects.equals(place, halls.place);
+                Objects.equals(columns, halls.columns) &&
+                Objects.equals(account_id, halls.account_id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, rows, place);
-    }
-
-    @Override
-    public String toString() {
-        return "Halls{" +
-                "id='" + id + '\'' +
-                ", rows='" + rows + '\'' +
-                ", place='" + place + '\'' +
-                '}';
+        return Objects.hash(id, rows, columns, account_id);
     }
 }

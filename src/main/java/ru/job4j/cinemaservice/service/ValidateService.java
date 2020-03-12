@@ -21,11 +21,11 @@ public class ValidateService {
         return INSTANCE;
     }
 
-    public boolean addHalls(String rows, String place) {
+    public boolean addHalls(String rows, String columns) {
         boolean result = false;
 
-        if (rows != null && place != null ) {
-            logic.addHolls(new Halls(rows, place));
+        if (rows != null && columns != null ) {
+            logic.addHolls(new Halls(rows, columns));
         }
 
         return result;
