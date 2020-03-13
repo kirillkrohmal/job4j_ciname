@@ -28,7 +28,7 @@ public class PaymentServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
-        storage.addAccounts(new Accounts(atomicInteger.incrementAndGet(), req.getParameter("value")));
+        storage.addAccounts(new Accounts(atomicInteger.incrementAndGet(), req.getParameter("value"), req.getParameter("username"), req.getParameter("phone")));
         resp.sendRedirect(String.format("%s%s", req.getContextPath(), "/view"));
 
     }

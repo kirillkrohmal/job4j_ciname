@@ -23,7 +23,7 @@ public class JdbcStore {
 
 
     public Halls addHolls(Halls halls) {
-        String s1 = "INSERT INTO halls(rows, place) VALUES (?, ?)";
+        String s1 = "INSERT INTO halls(rows, columns) VALUES (?, ?)";
 
         try(Connection connection = init()) {
             PreparedStatement statement = connection.prepareStatement(s1);
@@ -39,11 +39,13 @@ public class JdbcStore {
     }
 
     public Accounts addAccounts(Accounts accounts) {
-        String s1 = "INSERT INTO accounts(username, phone) VALUES (?, ?)";
+        String s1 = "INSERT INTO accounts(getValue, username, phone) VALUES (?, ?, ?)";
 
         try(Connection connection = init()) {
             PreparedStatement statement = connection.prepareStatement(s1);
             statement.setString(1, accounts.getValue());
+            statement.setString(2, accounts.getUsername());
+            statement.setString(3, accounts.getPhone());
 
             statement.executeUpdate();
         } catch (SQLException e) {

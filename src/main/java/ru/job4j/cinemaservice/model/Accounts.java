@@ -6,15 +6,17 @@ public class Accounts {
     private int id;
     private String value;
     private String username;
-    private int phone;
+    private String phone;
 
 
     public Accounts() {
     }
 
-    public Accounts(int id, String value) {
+    public Accounts(int id, String value, String username, String phone) {
         this.id = id;
         this.value = value;
+        this.username = username;
+        this.phone = phone;
     }
 
     public int getId() {
@@ -41,11 +43,12 @@ public class Accounts {
         this.username = username;
     }
 
-    public int getPhone() {
+
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
@@ -55,9 +58,9 @@ public class Accounts {
         if (o == null || getClass() != o.getClass()) return false;
         Accounts accounts = (Accounts) o;
         return id == accounts.id &&
-                phone == accounts.phone &&
                 Objects.equals(value, accounts.value) &&
-                Objects.equals(username, accounts.username);
+                Objects.equals(username, accounts.username) &&
+                Objects.equals(phone, accounts.phone);
     }
 
     @Override

@@ -19,19 +19,24 @@
 
 <script>
     function addRowAndPlace() {
-        var name = $('#usr').val();
-
-        $.ajax({
-            type: 'GET',
-            url: 'http://localhost:8080/cinema/view',
-            data: 'name=' + $('#usr').val(),
-            dataType: 'text'
-        }).done(function (data) {
-            $('tablename tr:last').after('<tr><td>' + name + '</td></tr>');
-        }).fail(function (err) {
-            alert(err);
-        });
+        window.location.href = '/cinema/payment'
     }
+
+
+    /* function addRowAndPlace() {
+         var name = $('#usr').val();
+
+         $.ajax({
+             type: 'GET',
+             url: 'http://localhost:8080/cinema/view',
+             data: 'name=' + $('#usr').val(),
+             dataType: 'text'
+         }).done(function (data) {
+             $('tablename tr:last').after('<tr><td>' + name + '</td></tr>');
+         }).fail(function (err) {
+             alert(err);
+         });
+     }*/
 
 </script>
 
@@ -73,7 +78,7 @@
         </table>
     </div>
     <div class="row float-right">
-        <button type="button" class="btn btn-success" window.local.href="views/payment.html" onclick="addRowAndPlace">Оплатить</button>
+        <button type="button" class="btn btn-success" onclick="addRowAndPlace()">Оплатить</button>
     </div>
 </div>
 </body>
