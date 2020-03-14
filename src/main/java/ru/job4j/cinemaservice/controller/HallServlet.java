@@ -20,7 +20,7 @@ public class HallServlet extends HttpServlet {
         resp.setContentType("text/html");
         req.setAttribute("halls", this.logic.values());
 
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("WEB-INF/views/cinemaindex.html");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("WEB-INF/views/cinemaservice/cinemaindex.html");
         requestDispatcher.forward(req, resp);
     }
 

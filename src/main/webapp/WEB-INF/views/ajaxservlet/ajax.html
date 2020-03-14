@@ -36,7 +36,7 @@
             data: 'name=' + $('#usr').val(),
             dataType: 'text'
         }).done(function (data) {
-            $('tablename tr:last').after('<tr><td>' + name + '</td></tr>');
+            $('table tr:last').after('<tr><td>' + name + '</td></tr>');
         }).fail(function (err) {
             alert(err);
         });
