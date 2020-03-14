@@ -6,13 +6,13 @@ public class Halls {
     private int id;
     private String rows;
     private String columns;
-    private String account_id;
+    private int account_id;
 
 
     public Halls() {
     }
 
-    public Halls(int id, String rows, String columns, String account_id) {
+    public Halls(int id, String rows, String columns, int account_id) {
         this.id = id;
         this.rows = rows;
         this.columns = columns;

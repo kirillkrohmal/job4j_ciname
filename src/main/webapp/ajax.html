@@ -14,26 +14,13 @@
 
 
 <script>
-    /*function sendGreeting() {
-        $.ajax({
-            type: 'GET',
-            url: 'http://localhost:8080/items/greet',
-            data: 'name=' + $('#exampleInputEmail1').val(),
-            dataType: 'text'
-        }).done(function (data) {
-            alert(data);
-        }).fail(function (err) {
-            alert(err);
-        });
-    }*/
 
     function addRow() {
         var name = $('#usr').val();
 
         $.ajax({
             type: 'GET',
-            url: 'http://localhost:8080/items/greet',
-            data: 'name=' + $('#usr').val(),
+            url: 'http://localhost:8080/cinema/greet',
             dataType: 'text'
         }).done(function (data) {
             $('table tr:last').after('<tr><td>' + name + '</td></tr>');
@@ -46,19 +33,19 @@
 
 <div class="container">
     <form>
-        <table id='tablename'>
-            <tbody id="name">
+        <table class='table'>
             <tr>
                 <th>Name</th>
+            </tr>
+            <tr>
                 <td></td>
             </tr>
-            </tbody>
         </table>
 
         <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="text" class="form-control" id="usr" aria-describedby="emailHelp"
-                   placeholder="Enter email">
+            <label for="usr">Your name: </label>
+            <input type="text" class="form-control" id="usr" aria-describedby="usrHelp"
+                   placeholder="Enter username">
         </div>
         <button type="button" class="btn btn-primary" onclick="addRow()">Submit</button>
     </form>
