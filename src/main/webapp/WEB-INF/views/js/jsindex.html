@@ -10,21 +10,20 @@
 
     <script>
         function validate() {
-            var valueName = $('name').val();
-            alert($('#name').attr('Введите имя'))
-            var valueLastName = $('lastname').val();
-            var valueDescription = $('description').val();
+            var valueName = $('#name').val();
+            var valueLastName = $('#lastname').val();
+            var valueDescription = $('#description').val();
 
-            if (valueName == '') {
-                alert($('#name').attr('Введите имя'))
+            if (valueName == '' ) {
+                alert($('#name').attr('title'));
             }
 
-            if (valueLastName == '') {
-                alert($('#lastname').attr('Введите фамилию'))
+            else if (valueLastName == '') {
+                alert($('#lastname').attr('title'));
             }
 
-            if (valueDescription == '') {
-                alert($('#description').attr('Введите описание'))
+            else if (valueDescription == '') {
+                alert($('#description').attr('title'));
             }
         }
     </script>
@@ -39,24 +38,20 @@
     </div>
     <div class="form-group">
         <label for="name">Name:</label>
-        <input type="text" class="form-control" id="name">
+        <input type="text" class="form-control" title="Enter username." id="name">
     </div>
     <div class="form-group">
         <label for="lastname">Lastname:</label>
-        <input type="text" class="form-control" id="lastname">
+        <input type="text" class="form-control" title="Enter lastname." id="lastname">
     </div>
     <div class="form-group">
-        <label for="sex">Sex:</label>
-        <label>
-            <input type="radio" name="sex">
-        </label> Male
-        <label>
-            <input type="radio" name="sex">
-        </label> Female
+        <label>Sex:</label>
+        <label for="sex"><input type="radio" name="sex" value="man" checked></label> Male
+        <label for="sex"><input type="radio" name="sex" value="woman"></label> Female
     </div>
     <div class="form-group">
         <label for="description">Description:</label>
-        <input type="text" class="form-control" id="description">
+        <input type="text" class="form-control" title="Enter description." id="description">
     </div>
     <div class="checkbox">
         <label><input type="checkbox">Remember me</label>
