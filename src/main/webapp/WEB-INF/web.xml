@@ -34,5 +34,14 @@
         <url-pattern>/payment</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>JsonServlet</servlet-name>
+        <servlet-class>ru.job4j.jsonservlet.controller.JsonServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JsonServlet</servlet-name>
+        <url-pattern>/list</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>
