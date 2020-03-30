@@ -8,7 +8,6 @@ public class Halls {
     private String columns;
     private int account_id;
 
-
     public Halls() {
     }
 

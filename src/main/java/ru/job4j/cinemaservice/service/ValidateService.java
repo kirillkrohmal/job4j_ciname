@@ -30,4 +30,14 @@ public class ValidateService {
 
         return result;
     }
+
+    public boolean getHalls(String rows, String columns) {
+        boolean result = false;
+
+        if (rows != null && columns != null ) {
+            logic.getAll();
+        }
+
+        return result;
+    }
 }
