@@ -13,7 +13,7 @@
 
     <title>Сервис - Кинотеатр</title>
 </head>
-<body>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -40,8 +40,18 @@
 
 </script>
 
+<body>
+<form action="myForm">
 
-<div class="container">
+    Rows : <input type="text" name="rows"> <br>
+    Columns: <input type="text" name="columns"> <br>
+    <input type="submit" value="Submit"> <input type="reset">
+
+
+</form>
+
+
+<!--<div class="container">
     <div class="row pt-3">
         <h4>
             Бронирование месте на сеанс
@@ -80,6 +90,6 @@
     <div class="row float-right">
         <button type="button" class="btn btn-success" onclick="addRowAndPlace()">Оплатить</button>
     </div>
-</div>
+</div>-->
 </body>
 </html>

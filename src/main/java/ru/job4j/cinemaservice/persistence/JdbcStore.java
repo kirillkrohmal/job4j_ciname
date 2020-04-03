@@ -69,7 +69,7 @@ public class JdbcStore {
 
 
     public Accounts addAccounts(Accounts accounts) {
-        String s1 = "INSERT INTO accounts(getValue, username, phone) VALUES (?, ?, ?)";
+        String s1 = "INSERT INTO accounts(username, phone) VALUES (?, ?)";
 
         try(Connection connection = init()) {
             PreparedStatement statement = connection.prepareStatement(s1);
