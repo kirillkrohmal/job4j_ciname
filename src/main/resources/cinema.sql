@@ -15,3 +15,6 @@ CREATE TABLE halls
   account_id integer REFERENCES accounts (id),
   CONSTRAINT halls_pkey PRIMARY KEY (id)
 );
+
+
+insert table halls(rows, columns, account_id) values('1', '1', 1);
