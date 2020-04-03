@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:c="">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -47,6 +47,26 @@
     Columns: <input type="text" name="columns"> <br>
     <input type="submit" value="Submit"> <input type="reset">
 
+
+</form>
+
+
+<form action="<%=request.getContextPath()%>/myForm" method="get">
+    <table border="1">
+        <td>rows</td>
+        <td>columns</td>
+        <%--@elvariable id="users" type="java.util.List"--%>
+        <c:forEach items="${row}" var="rows">
+            <tr>
+                <td><c:out value="${rows}"/>></td>
+            </tr>
+        </c:forEach>
+        <c:forEach items="${columns}" var="column">
+            <tr>
+                <td><c:out value="${column}"/>></td>
+            </tr>
+        </c:forEach>
+    </table>
 
 </form>
 

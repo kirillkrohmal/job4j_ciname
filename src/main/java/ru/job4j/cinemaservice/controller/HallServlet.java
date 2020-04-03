@@ -44,8 +44,8 @@ public class HallServlet extends HttpServlet {
         resp.setContentType("text/html");
         PrintWriter pw=resp.getWriter();
         pw.write("<h2> Following data received sucessfully.. <h2> <br>");
-        pw.write("<h3> Email: "+ rows +" </h3>");
-        pw.write("<h3> User name: "+ columns +" </h3>");
+        pw.write("<h3> Email: " + rows + " </h3>");
+        pw.write("<h3> User name: " + columns + " </h3>");
 
         pw.write("</h3>");
 
