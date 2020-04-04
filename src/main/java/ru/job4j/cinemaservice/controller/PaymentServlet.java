@@ -30,6 +30,5 @@ public class PaymentServlet extends HttpServlet {
         resp.setContentType("text/html");
         storage.addAccounts(new Accounts(atomicInteger.incrementAndGet(), req.getParameter("value"), req.getParameter("username"), req.getParameter("phone")));
         resp.sendRedirect(String.format("%s%s", req.getContextPath(), "/view"));
-
     }
 }

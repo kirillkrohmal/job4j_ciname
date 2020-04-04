@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en" xmlns:c="">
 <head>
@@ -40,36 +41,22 @@
 
 </script>
 
-<body>
-<form action="myForm">
+<form action="<%=request.getContextPath()%>/view" method="get">
+    <td>Rows</td>
+    <c:forEach items="${halls}" var="hall">
+        <c:out value="${hall.rows}"/>
+    </c:forEach>
+    <td>Columns</td>
+    <%--@elvariable id="halls" type="java.util.List"--%>
+    <c:forEach items="${halls}" var="hall">
+        <c:out value="${hall.columns}"/>
+    </c:forEach>
 
-    Rows : <input type="text" name="rows"> <br>
-    Columns: <input type="text" name="columns"> <br>
-    <input type="submit" value="Submit"> <input type="reset">
-
-
-</form>
-
-
-<form action="<%=request.getContextPath()%>/myForm" method="get">
-    <table border="1">
-        <td>rows</td>
-        <td>columns</td>
-        <%--@elvariable id="users" type="java.util.List"--%>
-        <c:forEach items="${row}" var="rows">
-            <tr>
-                <td><c:out value="${rows}"/>></td>
-            </tr>
-        </c:forEach>
-        <c:forEach items="${columns}" var="column">
-            <tr>
-                <td><c:out value="${column}"/>></td>
-            </tr>
-        </c:forEach>
-    </table>
+    <div class="row float-right">
+        <button type="button" class="btn btn-success" onclick="addRowAndPlace()">Оплатить</button>
+    </div>
 
 </form>
-
 
 <!--<div class="container">
     <div class="row pt-3">
