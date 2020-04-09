@@ -1,11 +1,7 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
-<html lang="en" xmlns:c="">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<html>
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -14,8 +10,7 @@
 
     <title>Сервис - Кинотеатр</title>
 </head>
-
-
+<body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <script>
@@ -41,27 +36,10 @@
 
 </script>
 
-<form action="<%=request.getContextPath()%>/view" method="get">
-    <td>Rows</td>
-    <c:forEach items="${halls}" var="hall">
-        <c:out value="${hall.rows}"/>
-    </c:forEach>
-    <td>Columns</td>
-    <%--@elvariable id="halls" type="java.util.List"--%>
-    <c:forEach items="${halls}" var="hall">
-        <c:out value="${hall.columns}"/>
-    </c:forEach>
-
-    <div class="row float-right">
-        <button type="button" class="btn btn-success" onclick="addRowAndPlace()">Оплатить</button>
-    </div>
-
-</form>
-
-<!--<div class="container">
+<div class="container">
     <div class="row pt-3">
         <h4>
-            Бронирование месте на сеанс
+            Бронирование места на сеанс
         </h4>
         <table class="table table-bordered">
             <thead>
@@ -97,6 +75,6 @@
     <div class="row float-right">
         <button type="button" class="btn btn-success" onclick="addRowAndPlace()">Оплатить</button>
     </div>
-</div>-->
+</div>
 </body>
 </html>
